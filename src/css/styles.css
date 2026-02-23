@@ -144,3 +144,85 @@ main {
 .container .profile-results.hide {
   display: none;
 }
+
+/* Estilos para o cartão de perfil */
+.profile-card {
+  display: flex;
+  gap: var(--spacing-lg);
+  align-items: flex-start;
+  width: 100%;
+  padding: var(--spacing-xl) 0;
+}
+
+.profile-avatar {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+  text-align: left;
+}
+
+.profile-info h2 {
+  font-size: var(--font-xl);
+  font-weight: 700;
+  margin-bottom: var(--spacing-sm);
+  color: var(--foreground);
+}
+
+.profile-info p {
+  font-size: var(--font-sm);
+  margin-bottom: var(--spacing-sm);
+  color: var(--muted-foreground);
+  text-align: justify;
+}
+
+.profile-info a {
+  margin-top: var(--spacing-md);
+  padding: 0.5rem 1rem;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  text-decoration: none;
+  border-radius: calc(var(--radius) - 2px);
+  font-size: var(--font-sm);
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.profile-info a:hover {
+  background: #667eea;
+  box-shadow: var(--shadow-sm);
+}
+
+.bio {
+  width: 17rem;
+}
+
+.loading {
+  display: none;
+  width: 2rem;
+  height: 2rem;
+  border: 3px solid rgba(102, 126, 234, 0.2);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: var(--spacing-lg) auto;
+}
+
+.loading.show {
+  display: block;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
