@@ -25,7 +25,7 @@ export function render(userData, userRepos, container) {
         <div class="profile-card">
             <img src="${userData.avatar_url}" alt="Avatar de ${userData.name}" class="profile-avatar">
             <div class="profile-info">
-                <h2>${userData.name || ""}</h2>
+                <h2>${userData.name || "Não possui nome cadastrado!"}</h2>
                 <p class="bio">${userData.bio || 'Sem bio disponível😔'}</p>
                 <p><strong>Repositórios públicos:</strong> ${userData.public_repos}</p>
                 <div>
